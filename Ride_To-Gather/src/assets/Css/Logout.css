@@ -1,0 +1,92 @@
+/* src/assets/Css/Logout.css */
+
+.logout-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #1a237e 0%, #3949ab 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .logout-modal {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  .logout-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .logout-icon {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+  
+  .logout-modal h2 {
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .logout-modal p {
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .logout-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+  
+  .logout-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .logout-button.cancel {
+    background-color: #e0e0e0;
+    color: #333;
+  }
+  
+  .logout-button.confirm {
+    background-color: #d32f2f;
+    color: white;
+  }
+  
+  .logout-button.cancel:hover {
+    background-color: #bdbdbd;
+  }
+  
+  .logout-button.confirm:hover {
+    background-color: #b71c1c;
+  }
+  
+  /* Responsive adjustments */
+  @media (min-width: 768px) {
+    .logout-buttons {
+      flex-direction: row;
+      justify-content: space-around;
+      width: auto;
+    }
+    .logout-button{
+      width:auto;
+    }
+  }

@@ -1,0 +1,270 @@
+.add-ride-background {
+    position: relative;
+    width: 100vw;
+    height: auto;
+    background: linear-gradient(135deg, #1a237e 0%, #3949ab 100%);
+    overflow: hidden;
+    display: flex;
+    padding-top: 30px;
+    justify-content: center;
+    align-items: center;
+    overflow-y: scroll;
+}
+
+.background-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 60%);
+    animation: rotate 30s linear infinite;
+    pointer-events: none;
+    z-index: -1;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.add-ride-container {
+    width: 500px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    animation: fadeIn 1.5s ease-in-out;
+    font-family: 'Arial', sans-serif;
+}
+
+.add-ride-heading {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1a237e;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.add-ride-form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+}
+
+.add-ride-form label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1a237e;
+    margin-bottom: 5px;
+}
+
+.add-ride-form input,
+.add-ride-form select,
+.add-ride-form textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid rgba(26, 35, 126, 0.1);
+    border-radius: 8px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.add-ride-form input:focus,
+.add-ride-form select:focus,
+.add-ride-form textarea:focus {
+    outline: none;
+    border-color: #1a237e;
+    box-shadow: 0 0 0 4px rgba(26, 35, 126, 0.1);
+}
+
+.add-button {
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, #1a237e 0%, #3949ab 100%);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.add-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(26, 35, 126, 0.3);
+}
+
+.add-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(26, 35, 126, 0.2);
+}
+
+.error-message {
+    color: #ef4444;
+    font-size: 0.875rem;
+    margin-top: 5px;
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.field-icon {
+    margin-right: 8px;
+    color: #1a237e;
+    font-size: 1.2rem;
+    vertical-align: middle;
+}
+
+.back-btn {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: 100px;
+    padding: 0.75rem 1.5rem;
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: #1a237e;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.back-btn:hover {
+    background: rgba(255, 255, 255, 0.9);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.back-btn:active {
+    transform: translateY(0);
+}
+
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.generate-ride-button {
+    width: 100%;
+    max-width: 300px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, #1a237e 0%, #3949ab 100%);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.generate-ride-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(26, 35, 126, 0.3);
+}
+
+.generate-ride-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(26, 35, 126, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .add-ride-container {
+        padding: 1rem;
+    }
+
+    .add-ride-form {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+
+    .add-ride-heading {
+        font-size: 1.5rem;
+        margin-top: 3rem;
+    }
+
+    .back-btn {
+        top: calc(60px + 1rem);
+        left: 1rem;
+        padding: 0.6rem 1.2rem;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .back-btn {
+        position: fixed;
+        top: 70px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: calc(100% - 2rem);
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    .back-btn:hover {
+        transform: translateX(-50%) translateY(-2px);
+    }
+
+    .add-ride-heading {
+        margin-top: 4rem;
+    }
+
+    .add-ride-form {
+        padding: 1rem;
+    }
+
+    .add-ride-form label {
+        font-size: 0.85rem;
+    }
+
+    .add-ride-form input,
+    .add-ride-form select,
+    .add-ride-form textarea {
+        padding: 0.75rem;
+        font-size: 0.95rem;
+    }
+
+    .error-message {
+        font-size: 0.8rem;
+    }
+}

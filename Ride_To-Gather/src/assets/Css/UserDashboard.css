@@ -1,0 +1,119 @@
+.user-dashboard-container {
+  padding: 20px;
+  background-color: #f0f4ff;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a237e 0%, #3949ab 100%);
+  color: white;
+  font-family: 'Arial', sans-serif;
+}
+
+.dashboard-heading {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.dynamic-box {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dynamic-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.user-details {
+  background: rgba(255, 255, 255, 0.9);
+  color: #1a237e;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+.user-details h2 {
+  margin-bottom: 10px;
+}
+
+.rides-section {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.rides-box {
+  flex: 1;
+  min-width: 300px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #1a237e;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.rides-box h2 {
+  margin-bottom: 10px;
+}
+
+.rides-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.rides-box li {
+  margin-bottom: 10px;
+  padding: 10px;
+  background: rgba(26, 35, 126, 0.1);
+  border-radius: 8px;
+}
+
+.ride-item {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.ride-item:hover {
+  background-color: #f9f9f9;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.hoverable:hover a {
+  text-decoration: underline;
+  color: #3949ab;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .rides-section {
+    flex-direction: column;
+  }
+
+  .rides-box {
+    margin-bottom: 20px;
+  }
+}
